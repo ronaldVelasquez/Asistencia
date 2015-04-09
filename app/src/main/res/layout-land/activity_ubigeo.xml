@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="inei.asistencia.UbigeoActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true">
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_description"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_correcto"
+                android:layout_width="55dp"
+                android:layout_height="60dp"
+                android:text="Son Correctos"
+                android:textStyle="bold"
+                android:background="@drawable/button_ubigeo_correct"
+                android:textSize="24sp"
+                android:focusable="true"
+                android:textColor="#FFFFFF"
+                android:drawableLeft="@drawable/correct"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"/>
+
+            <Button
+                android:id="@+id/btn_incorrecto"
+                android:layout_width="55dp"
+                android:layout_height="60dp"
+                android:text="No son los Datos"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_ubigeo_incorrect"
+                android:textSize="24sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:drawableLeft="@drawable/incorrect"
+                android:layout_toRightOf="@+id/btnCorrecto"
+                android:layout_toEndOf="@+id/btnCorrecto"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
