@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "inei.asistencia.UbigeoActivity"/>
+      <point      
+        x = "1840"      
+        y = "272"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "inei.asistencia.LoginActivity"/>
+      <point      
+        x = "-220"      
+        y = "228"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "inei.asistencia.PadronActivity"/>
+      <point      
+        x = "3724"      
+        y = "116"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

@@ -12,6 +12,7 @@ import android.widget.Button;
 
 public class LoginActivity extends Activity {
     Button btnLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,7 @@ public class LoginActivity extends Activity {
                 startActivity(intent);
             }
         });
+
     }
 
 }

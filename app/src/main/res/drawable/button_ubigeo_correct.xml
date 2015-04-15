@@ -13,6 +13,8 @@
             <stroke
                 android:width="3dp"
                 android:color="@color/green_dark"/>
+            <padding android:paddingLeft="20dp"
+                android:paddingRight="20dp"/>
         </shape>
     </item>
 
@@ -29,6 +31,8 @@
             <stroke
                 android:width="3dp"
                 android:color="@color/white"/>
+            <padding android:paddingLeft="20dp"
+                android:paddingRight="20dp"/>
         </shape>
     </item>
 </selector>

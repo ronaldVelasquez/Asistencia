@@ -19,11 +19,17 @@
         </activity>
         <activity
             android:name=".UbigeoActivity"
-            android:label="@string/title_activity_ubigeo" >
+            android:label="@string/title_activity_ubigeo"
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name=".PadronActivity"
-            android:label="@string/title_activity_padron" >
+            android:label="@string/title_activity_padron"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
         </activity>
     </application>
 

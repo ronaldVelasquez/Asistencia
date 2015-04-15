@@ -6,6 +6,36 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="inei.asistencia.PadronActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:id="@+id/textView"
+        android:text="Se debe descargar un nuevo padrón"
+        android:gravity="center_horizontal"
+        />
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_btn_download_padron"
+        android:src="@drawable/download_white"
+        android:background="@color/light_blue"
+        android:padding="20sp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descargar Padrón Aquí"
+        android:textSize="40sp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/img_btn_download_padron"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp" />
 </RelativeLayout>
