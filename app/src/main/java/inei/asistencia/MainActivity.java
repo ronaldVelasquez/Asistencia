@@ -7,14 +7,15 @@ import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 
 import java.util.ArrayList;
 
@@ -29,22 +30,19 @@ public class MainActivity extends Activity {
     private DrawerLayout drawerLayout;
     private ListView listView;
     private ActionBarDrawerToggle drawerToogle;
-
+    private RelativeLayout relativeLayout;
     private CharSequence charSequenceDrawerTitle;
     private CharSequence charSequenceTitle;
 
     private String[] menuTitles;
-    private TypedArray menuIcons;
-
-    private ArrayList<DrawerItem> drawerItems;
-    private DrawerListAdapter adapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        TypedArray menuIcons;
+        ArrayList<DrawerItem> drawerItems;
+        DrawerListAdapter adapter;
         charSequenceTitle = charSequenceDrawerTitle = getTitle();
 
         //Carga los titulos del menu del navdrawer
@@ -53,6 +51,7 @@ public class MainActivity extends Activity {
         // Carga los iconos del navdrawer
         menuIcons = getResources().obtainTypedArray(R.array.menu_icons);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        relativeLayout = (RelativeLayout)findViewById(R.id.layout_relative);
         listView = (ListView) findViewById(R.id.list_slidermenu);
 
         drawerItems = new ArrayList<DrawerItem>();
@@ -62,11 +61,9 @@ public class MainActivity extends Activity {
         drawerItems.add(new DrawerItem(menuTitles[3], menuIcons.getResourceId(3, -1)));
 
         menuIcons.recycle();
-
-        listView.setOnItemClickListener(new MenuClickListener());
-
         adapter = new DrawerListAdapter(getApplicationContext(), drawerItems);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new MenuClickListener());
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setHomeButtonEnabled(true);
 
@@ -125,33 +122,30 @@ public class MainActivity extends Activity {
 
     private void displayView(int position){
         FragmentManager fragmentManager = getFragmentManager();
-        Fragment fragment = null;
+        Fragment fragment;
         switch (position) {
-            case 0:
+
+            case 1:
                 fragment = new RegistroFragment();
                 break;
-            case 1:
+            case 2:
                 fragment = new ListadoFragment();
                 break;
-            case 2:
+            case 3:
                 fragment = new ReporteFragment();
                 break;
-            case 3:
+            case 4:
                 fragment = new BusquedaFragment();
                 break;
             default:
                 fragment = new RegistroFragment();
                 break;
         }
-        if (fragment!= null) {
-            fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
-            listView.setItemChecked(position, true);
-            listView.setSelection(position);
-            setTitle(menuTitles[position]);
-            drawerLayout.closeDrawer(listView);
-        } else {
-            Log.e("MainActivity", "Error al crear la vista");
-        }
+        fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
+        listView.setItemChecked(position, true);
+        listView.setSelection(position);
+        setTitle(menuTitles[position]);
+        drawerLayout.closeDrawer(relativeLayout);
     }
 
     @Override

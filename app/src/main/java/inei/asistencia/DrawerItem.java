@@ -6,11 +6,24 @@ package inei.asistencia;
 public class DrawerItem {
     private String title;
     private int icon;
+    private int logo;
 
     public DrawerItem(String title, int icon) {
         this.title = title;
         this.icon = icon;
 
+    }
+
+    public DrawerItem(int logo) {
+        this.logo = logo;
+    }
+
+    public int getLogo() {
+        return logo;
+    }
+
+    public void setLogo(int logo) {
+        this.logo = logo;
     }
 
     public int getIcon() {

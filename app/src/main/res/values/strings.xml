@@ -5,11 +5,12 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_ubigeo">Ubigeo</string>
     <string name="title_activity_padron">Descargar Padrón</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Asistencia</string>
 
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_busqueda_fragment">Búsqueda de Postulante</string>
+    <string name="title_registro_fragment">Registro de Asistencia</string>
+    <string name="title_reporte_fragment">Reportes</string>
+    <string name="title_listado_fragment">Listado de Asistencia</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -17,10 +18,11 @@
     <string name="action_example">Example action</string>
 
     <string-array name="menu_titles">
-        <item>Registro</item>
-        <item>Listado</item>
-        <item>Reporte</item>
-        <item>Búsqueda de Postulante</item>
+        <item>@string/title_registro_fragment</item>
+        <item>@string/title_listado_fragment</item>
+        <item>@string/title_reporte_fragment</item>
+        <item>@string/title_busqueda_fragment</item>
+
     </string-array>
     <array name="menu_icons">
         <item>@mipmap/register_person</item>
