@@ -19,8 +19,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:ems="8"
-        android:id="@+id/editText"
+        android:textSize="20sp"
+        android:id="@+id/txt_password"
         android:hint="Password"
         android:layout_below="@+id/image_logo"
         android:layout_centerHorizontal="true"
@@ -34,7 +34,7 @@
         android:textStyle="bold"
         android:id="@+id/btn_login"
         android:background="@drawable/button_login"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/txt_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp" />
 </RelativeLayout>

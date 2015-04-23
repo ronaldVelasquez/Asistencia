@@ -11,19 +11,19 @@
         android:layout_height="wrap_content"
         android:id="@+id/image_logo"
         android:src="@drawable/logo"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="170dp" />
+        android:layout_above="@+id/txt_password"
+        android:layout_alignEnd="@+id/button_login"
+        android:layout_marginBottom="39dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:ems="8"
-        android:id="@+id/editText"
+        android:textSize="20sp"
+        android:id="@+id/txt_password"
         android:hint="Password"
         android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/image_logo" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
         android:textStyle="bold"
         android:id="@+id/button_login"
         android:background="@drawable/button_login"
-        android:layout_marginTop="66dp"
-        android:layout_below="@+id/editText"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/txt_password"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
