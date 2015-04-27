@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import inei.asistencia.Library.DrawerItem;
+import inei.asistencia.utils.DrawerItem;
 
 /**
  * Created by Cr-Diego on 15/04/2015.

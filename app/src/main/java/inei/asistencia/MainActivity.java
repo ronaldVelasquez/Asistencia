@@ -17,7 +17,7 @@ import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
-import inei.asistencia.Library.DrawerItem;
+import inei.asistencia.utils.DrawerItem;
 import inei.asistencia.fragments.BusquedaFragment;
 import inei.asistencia.fragments.ListadoFragment;
 import inei.asistencia.fragments.RegistroFragment;
