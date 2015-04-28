@@ -10,14 +10,21 @@ public class UbigeoE {
     private String direccion;
     private int aulas;
     private String estado;
+    private int cod_sede_operativa;
+    private int cod_local_sede;
 
-    public UbigeoE(int aulas, String direccion, String estado, String local, String sede_operativa, String usuario) {
+    public UbigeoE(int aulas, int cod_local_sede, int cod_sede_operativa, String direccion, String estado, String local, String sede_operativa, String usuario) {
         this.aulas = aulas;
+        this.cod_local_sede = cod_local_sede;
+        this.cod_sede_operativa = cod_sede_operativa;
         this.direccion = direccion;
         this.estado = estado;
         this.local = local;
         this.sede_operativa = sede_operativa;
         this.usuario = usuario;
+    }
+
+    public UbigeoE() {
     }
 
     public int getAulas() {
